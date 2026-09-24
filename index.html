@@ -175,7 +175,7 @@
     <div class="pkgs">
       <div class="pkg">
         <h3>Essentials</h3>
-        <div class="price">$169</div>
+        <div class="price">$179</div>
         <p class="desc">Everything a clean listing needs.</p>
         <ul>
           <li>25–30 finished HDR photos</li>
@@ -184,12 +184,12 @@
           <li>Next-morning delivery</li>
           <li>Property website included</li>
         </ul>
-        <a href="#contact" class="btn btn-outline">Book Essentials <span class="arr">→</span></a>
+        <a href="#contact" class="btn btn-outline" data-package="Essentials — $179">Book Essentials <span class="arr">→</span></a>
       </div>
       <div class="pkg featured">
         <span class="tag">★ Most popular</span>
         <h3>Social</h3>
-        <div class="price">$269</div>
+        <div class="price">$299</div>
         <p class="desc">Your listing <em>and</em> your personal brand, in one shoot.</p>
         <ul>
           <li>Everything in Essentials</li>
@@ -198,7 +198,7 @@
           <li>Social-ready 9:16 vertical</li>
           <li>Next-morning delivery</li>
         </ul>
-        <a href="#contact" class="btn btn-light">Book Social <span class="arr">→</span></a>
+        <a href="#contact" class="btn btn-light" data-package="Social — $299">Book Social <span class="arr">→</span></a>
       </div>
       <div class="pkg">
         <h3>Showcase</h3>
@@ -211,7 +211,7 @@
           <li>MLS + high-res files</li>
           <li>Next-morning delivery</li>
         </ul>
-        <a href="#contact" class="btn btn-outline">Book Showcase <span class="arr">→</span></a>
+        <a href="#contact" class="btn btn-outline" data-package="Showcase — $429">Book Showcase <span class="arr">→</span></a>
       </div>
     </div>
     <p class="pkg-fine">Homes over 2,500 sq ft: +$45 per additional 1,000 sq ft. Add-ons — floor plans, twilight, virtual staging, extra Reels — available at checkout.</p>
@@ -335,7 +335,17 @@
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Email address" required>
       </div>
-      <input type="text" name="subject" placeholder="Property address or package">
+      <div class="cf-pkg">
+        <input type="text" name="package" id="cfPackage" list="cfPackageList" placeholder="Select a package" autocomplete="off" aria-label="Package">
+        <button type="button" class="cf-clear" id="cfPackageClear" aria-label="Clear package" hidden>×</button>
+        <datalist id="cfPackageList">
+          <option value="Essentials — $179"></option>
+          <option value="Social — $299"></option>
+          <option value="Showcase — $429"></option>
+          <option value="Not sure yet"></option>
+        </datalist>
+      </div>
+      <input type="text" name="subject" placeholder="Property address">
       <textarea name="message" rows="4" placeholder="Tell us about the shoot…" required></textarea>
       <button type="submit" class="btn btn-navy">Send Message <span class="arr">→</span></button>
       <p class="cf-note" id="cfNote" aria-live="polite"></p>

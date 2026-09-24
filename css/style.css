@@ -345,6 +345,12 @@ h1,h2,h3,h4{
 .contact-form input::placeholder,.contact-form textarea::placeholder{color:#97a0b3}
 .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--gold-deep)}
 .contact-form .btn{align-self:center;margin-top:6px}
+.cf-pkg{position:relative}
+.cf-pkg input{padding-right:3rem}
+.cf-clear{position:absolute;right:.6rem;top:50%;transform:translateY(-50%);width:32px;height:32px;
+  border:0;border-radius:50%;background:var(--line);color:var(--ink);font-size:1.2rem;line-height:1;cursor:pointer;
+  transition:background .25s var(--ease)}
+.cf-clear:hover,.cf-clear:focus-visible{background:var(--gold);outline:none}
 .cf-note{text-align:center;font-size:.92rem;color:var(--gold-deep);min-height:1.2em;margin:0}
 
 /* ---------- contact ---------- */

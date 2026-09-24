@@ -29,18 +29,38 @@
   /* ---------- contact form → compose email (no backend) ---------- */
   var cform = document.getElementById("contactForm");
   if (cform) {
+    /* package field: prefilled from "Book …" buttons, clearable, datalist dropdown */
+    var pkgInput = document.getElementById("cfPackage");
+    var pkgClear = document.getElementById("cfPackageClear");
+    var syncClear = function () { pkgClear.hidden = !pkgInput.value; };
+    pkgInput.addEventListener("input", syncClear);
+    pkgClear.addEventListener("click", function () {
+      pkgInput.value = "";
+      syncClear();
+      pkgInput.focus();
+    });
+    document.querySelectorAll("[data-package]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        pkgInput.value = btn.getAttribute("data-package");
+        syncClear();
+      });
+    });
+
     cform.addEventListener("submit", function (e) {
       e.preventDefault();
       var el = cform.elements;
       var name = (el["name"].value || "").trim();
       var email = (el["email"].value || "").trim();
+      var pkg = (el["package"].value || "").trim();
       var subj = (el["subject"].value || "").trim();
       var msg = (el["message"].value || "").trim();
       var note = document.getElementById("cfNote");
       var body = "Name: " + name + "\nEmail: " + email +
-        (subj ? "\nProperty / package: " + subj : "") + "\n\n" + msg;
+        (pkg ? "\nPackage: " + pkg : "") +
+        (subj ? "\nProperty address: " + subj : "") + "\n\n" + msg;
+      var subjLine = "Shoot inquiry" + (pkg ? " — " + pkg : "") + (subj ? " — " + subj : "");
       var href = "mailto:info@novalistingmedia.com" +
-        "?subject=" + encodeURIComponent(subj ? "Shoot inquiry — " + subj : "Shoot inquiry") +
+        "?subject=" + encodeURIComponent(subjLine) +
         "&body=" + encodeURIComponent(body);
       window.location.href = href;
       if (note) note.textContent = "Opening your email app… if nothing happens, email info@novalistingmedia.com directly.";
