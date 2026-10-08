@@ -262,3 +262,7 @@
 @media (prefers-reduced-motion:reduce){
   .pin-ring,.hotspot:after,.svc-kicker:before{animation:none}
 }
+
+/* second sample stacked under the first, with a caption */
+.frame-2{margin-top:22px}
+.frame-cap{margin-top:.9rem;text-align:center;font-size:.98rem;color:#fff}
