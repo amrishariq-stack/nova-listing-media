@@ -152,10 +152,8 @@
 /* HUD overlays on photos */
 .hud{position:absolute;inset:0;z-index:3;pointer-events:none}
 .hud-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(11,19,38,.55),transparent 45%)}
-.hotspot{position:absolute;z-index:3;width:54px;height:54px;padding:0;border-radius:50%;border:2px solid #fff;cursor:pointer;
-  transform:translate(-50%,-50%) scale(var(--s,1)) scaleY(.42);background:rgba(255,255,255,.2);
-  transition:background .25s var(--ease),border-color .25s var(--ease)}
-.hotspot:hover,.hotspot:focus-visible{background:rgba(200,162,75,.75);border-color:var(--gold);outline:none}
+.hotspot{position:absolute;z-index:3;width:54px;height:54px;border-radius:50%;border:2px solid #fff;pointer-events:none;
+  transform:translate(-50%,-50%) scale(var(--s,1)) scaleY(.42);background:rgba(255,255,255,.2);}
 .hotspot:after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--gold);animation:svc-ring 2.4s ease-out infinite}
 .mock-bar{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:6px;z-index:4;
   background:rgba(11,19,38,.78);backdrop-filter:blur(8px);border:1px solid var(--hair-2);padding:6px;border-radius:999px}
@@ -284,9 +282,7 @@
 /* ---------- interactive tour sample (walk / dollhouse / floor plan) ---------- */
 .tour-view{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
 .tour-view.is-on{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
-.tour-img{position:absolute;inset:0;opacity:0;transition:opacity .7s var(--ease),transform 1.1s var(--ease)}
-.tour-img.is-on{opacity:1}
-.tour-img.is-step{transform:scale(1.7)}
+.tour-img{position:absolute;inset:0}
 .tour-room,.tour-hint{position:absolute;right:14px;top:14px;z-index:4;pointer-events:none;
   font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
   background:rgba(11,19,38,.72);backdrop-filter:blur(6px);border:1px solid var(--hair-2);padding:.34rem .6rem;border-radius:6px}
@@ -304,6 +300,5 @@ button.mock-pill:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .hotspot{width:44px;height:44px}
 }
 @media (prefers-reduced-motion:reduce){
-  .tour-img,.tour-view{transition:none}
-  .tour-img.is-step{transform:none}
+  .tour-view{transition:none}
 }

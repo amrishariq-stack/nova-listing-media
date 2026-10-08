@@ -319,16 +319,12 @@
         <figure class="frame r16 tour" data-tour>
           <span class="frame-tag"><b>Sample</b> · tour interface</span>
           <div class="tour-view is-on" data-view="walk">
-            <img class="tour-img is-on" data-room="kitchen" src="assets/work/p3.jpg" alt="Kitchen view inside a sample 3D virtual tour" loading="lazy">
-            <img class="tour-img" data-room="living" src="assets/work/p2.jpg" alt="Living room view inside a sample 3D virtual tour" loading="lazy">
+            <img class="tour-img is-on" src="assets/work/p3.jpg" alt="Kitchen view inside a sample 3D virtual tour" loading="lazy">
             <span class="hud-shade"></span>
-            <span class="tour-room" aria-live="polite">Kitchen</span>
-            <button type="button" class="hotspot" data-room="kitchen" data-go="living" style="left:14%;top:90%;--s:1.15" aria-label="Walk forward to the living room"></button>
-            <button type="button" class="hotspot" data-room="kitchen" data-go="living" style="left:82%;top:83%;--s:1" aria-label="Walk forward to the living room"></button>
-            <button type="button" class="hotspot" data-room="kitchen" data-go="living" style="left:87%;top:63%;--s:.7" aria-label="Walk forward to the living room"></button>
-            <button type="button" class="hotspot" data-room="living" data-go="kitchen" style="left:4%;top:92%;--s:1.15" aria-label="Walk back to the kitchen" hidden></button>
-            <button type="button" class="hotspot" data-room="living" data-go="kitchen" style="left:15%;top:71%;--s:.8" aria-label="Walk back to the kitchen" hidden></button>
-            <button type="button" class="hotspot" data-room="living" data-go="kitchen" style="left:86%;top:70%;--s:.75" aria-label="Walk back to the kitchen" hidden></button>
+            <span class="tour-room">Kitchen</span>
+            <span class="hotspot" style="left:14%;top:90%;--s:1.15" aria-hidden="true"></span>
+            <span class="hotspot" style="left:82%;top:83%;--s:1" aria-hidden="true"></span>
+            <span class="hotspot" style="left:87%;top:63%;--s:.7" aria-hidden="true"></span>
           </div>
           <div class="tour-view art" data-view="dollhouse">
             <span class="iso-floor" aria-hidden="true"></span>
@@ -338,16 +334,13 @@
             <span class="tour-hint">Dollhouse · whole floor at a glance</span>
           </div>
           <div class="tour-view art" data-view="plan">
-            <svg class="tour-plan" viewBox="120 96 528 418" role="img" aria-label="Floor plan view with selectable rooms">
+            <svg class="tour-plan" viewBox="120 96 528 418" role="img" aria-label="Floor plan view with a marker on the kitchen">
               <use href="#art-plan"/>
-              <g class="tour-dot" data-go="living" tabindex="0" role="button" aria-label="Walk the living room">
-                <circle class="pin-ring" cx="267" cy="244" r="11"/><circle class="pin-dot" cx="267" cy="244" r="7"/><circle cx="267" cy="244" r="22" fill="transparent"/>
-              </g>
-              <g class="tour-dot" data-go="kitchen" tabindex="0" role="button" aria-label="Walk the kitchen">
+              <g class="tour-dot" tabindex="0" role="button" aria-label="Back to the kitchen view">
                 <circle class="pin-ring" cx="527" cy="400" r="11"/><circle class="pin-dot" cx="527" cy="400" r="7"/><circle cx="527" cy="400" r="22" fill="transparent"/>
               </g>
             </svg>
-            <span class="tour-hint">Floor plan · pick a gold dot to walk that room</span>
+            <span class="tour-hint">Floor plan · gold dot is where you are standing</span>
           </div>
           <div class="mock-bar" role="group" aria-label="Tour view">
             <button type="button" class="mock-pill on" data-view-btn="walk" aria-pressed="true">Walk</button>
