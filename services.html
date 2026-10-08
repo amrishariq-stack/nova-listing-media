@@ -33,12 +33,6 @@
   <!-- shared line-art used by the samples below -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
-      <symbol id="art-room" viewBox="0 0 800 500">
-        <path class="ln-dim" d="M0 0 200 90M800 0 600 90M0 500 200 330M800 500 600 330M300 330 180 500M400 330 400 500M500 330 620 500"/>
-        <rect class="ln" x="200" y="90" width="400" height="240"/>
-        <rect class="ln" x="340" y="140" width="120" height="120"/>
-        <path class="ln-dim" d="M400 140V260M340 200H460"/>
-      </symbol>
       <symbol id="art-plan" viewBox="0 0 600 380">
         <rect class="ln-wall" x="30" y="30" width="540" height="320"/>
         <path class="ln-wall-in" d="M330 30V110M330 150V260M330 300V350M330 200H480M520 200H570M450 200V350M30 230H150"/>
@@ -200,31 +194,14 @@
   <section class="svc" id="staging">
     <div class="wrap svc-row">
       <div class="svc-visual" data-animation="scale-up">
-        <figure class="frame r16 art">
+        <figure class="frame r16">
           <span class="frame-tag"><b>Sample</b> · drag to stage the room</span>
-          <div class="ba" style="--pos:38%">
-            <div class="ba-layer">
-              <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a room after virtual staging, with sofa, rug, table, lamp and art">
-                <use href="#art-room"/>
-                <path class="ln-gold" d="M250 450 550 450 505 365 295 365Z"/>
-                <rect class="ln-gold" x="262" y="278" width="236" height="54" rx="10"/>
-                <rect class="ln-gold" x="248" y="320" width="264" height="44" rx="10"/>
-                <rect class="ln-gold" x="238" y="300" width="30" height="64" rx="9"/>
-                <rect class="ln-gold" x="492" y="300" width="30" height="64" rx="9"/>
-                <rect class="ln-gold" x="330" y="392" width="140" height="22" rx="5"/>
-                <path class="ln-gold" d="M344 414V432M456 414V432"/>
-                <path class="ln-gold" d="M566 332V214M546 214H586L578 184H554Z"/>
-                <rect class="ln-gold" x="504" y="150" width="72" height="50"/>
-                <rect class="ln-gold" x="212" y="318" width="26" height="26" rx="3"/>
-                <path class="ln-gold" d="M225 318C215 290 205 282 198 268M225 318C226 286 232 272 240 258M225 318C238 296 248 292 256 284"/>
-              </svg>
-            </div>
-            <div class="ba-layer ba-before" style="background:#111c36">
-              <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#art-room"/></svg>
-            </div>
+          <div class="ba">
+            <div class="ba-layer"><img src="assets/vs2.jpg" alt="Bedroom after virtual staging, furnished with a bed, nightstands, rug and seating" loading="lazy"></div>
+            <div class="ba-layer ba-before"><img src="assets/vs1.jpg" alt="" loading="lazy"></div>
             <span class="ba-label l">Empty</span><span class="ba-label r">Staged</span>
             <span class="ba-handle" aria-hidden="true"><span class="ba-knob">‹›</span></span>
-            <input class="ba-range" type="range" min="0" max="100" value="38" aria-label="Compare the empty room with the virtually staged room">
+            <input class="ba-range" type="range" min="0" max="100" value="28" aria-label="Compare the empty room with the virtually staged room">
             <span class="ba-focus"></span>
           </div>
         </figure>
