@@ -1,0 +1,88 @@
+/* ============================================================
+   NoVA Listing Media — pricing page
+   Builds on the dark .svc-page base in services.css
+   ============================================================ */
+
+.price-sec{padding:84px 0;border-top:1px solid var(--hair)}
+.price-head{max-width:780px;margin-bottom:44px}
+.price-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.price-head.center .svc-intro{margin:0 auto}
+.price-head h2{font-size:clamp(1.9rem,4.2vw,3.2rem);text-transform:uppercase;margin:.8rem 0 1rem}
+.price-page h3{color:#fff}
+
+/* ---------- packages ---------- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plan{position:relative;display:flex;flex-direction:column;padding:36px 30px 30px;
+  border:1px solid var(--hair-2);border-radius:var(--radius);
+  background:rgba(17,28,54,.72);backdrop-filter:blur(6px);
+  transition:border-color .3s var(--ease),transform .3s var(--ease)}
+.plan:hover{border-color:var(--gold)}
+.plan.featured{border-color:var(--gold);
+  background:linear-gradient(180deg,rgba(200,162,75,.2),rgba(17,28,54,.82) 44%);
+  box-shadow:0 34px 80px -44px rgba(200,162,75,.75)}
+.plan-tag{align-self:flex-start;margin-bottom:16px;padding:.35rem .8rem;border-radius:999px;
+  background:var(--gold);color:var(--ink);
+  font-family:'Archivo',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}
+.plan h3{font-size:1.6rem;text-transform:uppercase}
+.plan-price{font-family:'Archivo',sans-serif;font-weight:900;font-size:3.4rem;line-height:1;letter-spacing:-.03em;color:#fff;margin:.7rem 0 .5rem}
+.plan.featured .plan-price{color:var(--gold)}
+.plan-desc{min-height:3.3em;color:var(--dim)}
+.plan .svc-list{flex:1;margin:1.2rem 0 1.8rem}
+.plan .btn{justify-content:center}
+.price-fine{text-align:center;color:rgba(255,255,255,.55);font-size:.9rem;margin-top:30px}
+
+/* ---------- how it works ---------- */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.flow:before{content:"";position:absolute;left:0;right:0;top:19px;height:1px;
+  background:linear-gradient(90deg,var(--gold),rgba(200,162,75,.15))}
+.flow-step{position:relative;padding:0 34px 0 0}
+.flow-num{position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;
+  background:var(--deep);border:1.5px solid var(--gold);color:var(--gold);
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.06em}
+.flow-step h3{font-size:1.5rem;text-transform:uppercase;margin:1.3rem 0 .5rem}
+.flow-step p{max-width:34ch}
+
+/* ---------- build your own ---------- */
+.price-own{border-top:0;padding-top:0}
+.price-rule{height:1px;margin-bottom:84px;
+  background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent)}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.menu-card{padding:28px 26px 14px;border:1px solid var(--hair);border-radius:var(--radius);background:rgba(17,28,54,.62);
+  transition:border-color .3s var(--ease)}
+.menu-card:hover{border-color:var(--hair-2)}
+.menu-card h3{font-size:1.2rem;text-transform:uppercase;letter-spacing:-.01em}
+.menu-type{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin:.45rem 0 1.1rem}
+.menu-row{display:flex;align-items:baseline;gap:.6rem;padding:.72rem 0;border-top:1px solid var(--hair);font-size:.95rem}
+.menu-row i{flex:1;min-width:14px;border-bottom:1px dotted var(--hair-2);transform:translateY(-4px)}
+.menu-row b{font-family:'Archivo',sans-serif;font-weight:700;color:#fff;white-space:nowrap}
+.menu-row small{font-family:'Manrope',sans-serif;font-weight:500;font-size:.74rem;color:rgba(255,255,255,.55)}
+.price-cta{justify-content:center;margin-top:44px}
+
+/* ---------- included with every package ---------- */
+.incl{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hair);border-left:1px solid var(--hair)}
+.incl-item{padding:32px 28px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);background:rgba(11,19,38,.5)}
+.incl-item svg{width:34px;height:34px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.incl-item h3{font-size:1.1rem;text-transform:uppercase;margin:1.1rem 0 .45rem;letter-spacing:-.01em}
+.incl-item p{font-size:.96rem}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .plans{grid-template-columns:1fr}
+  .plan.featured{order:-1}
+  .plan-desc{min-height:0}
+  .menu{grid-template-columns:1fr 1fr}
+}
+@media (max-width:880px){
+  .price-sec{padding:60px 0}
+  .price-own{padding-top:0}
+  .price-rule{margin-bottom:60px}
+  .flow{grid-template-columns:1fr;gap:34px}
+  .flow:before{left:19px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--gold),rgba(200,162,75,.15))}
+  .flow-step{padding:0 0 0 62px}
+  .flow-num{position:absolute;left:0;top:0}
+  .flow-step h3{margin-top:0;padding-top:.35rem}
+  .incl{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  .menu,.incl{grid-template-columns:1fr}
+}
