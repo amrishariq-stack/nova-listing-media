@@ -133,8 +133,8 @@
          drop-shadow(0 0 0 rgba(200,162,75,.3)) drop-shadow(0 8px 14px rgba(0,0,0,.4))}
 .iso-wrap svg{width:60%;height:auto;color:#fff;--fx:0;transform:rotateX(56deg) rotateZ(-38deg);overflow:visible}
 /* live state (set by services.js while the sample is on screen): walls rise, plan turns, scan sweeps */
-.is-live .iso-wrap{animation:iso-rise 2.2s var(--ease) .15s both}
-.is-live .iso-wrap svg{animation:iso-spin 36s linear 1.6s infinite}
+.is-live .iso-wrap,.tour-view.is-on .iso-wrap{animation:iso-rise 2.2s var(--ease) .15s both}
+.is-live .iso-wrap svg,.tour-view.is-on .iso-wrap svg{animation:iso-spin 36s linear 1.6s infinite}
 @keyframes iso-rise{to{filter:
   drop-shadow(0 -3px 0 rgba(200,162,75,.8)) drop-shadow(0 -3px 0 rgba(200,162,75,.66))
   drop-shadow(0 -3px 0 rgba(200,162,75,.54)) drop-shadow(0 -3px 0 rgba(200,162,75,.42))
@@ -151,25 +151,11 @@
 
 /* HUD overlays on photos */
 .hud{position:absolute;inset:0;z-index:3;pointer-events:none}
-.hud-corners{position:absolute;inset:22px;
-  background:
-    linear-gradient(var(--gold),var(--gold)) top left/26px 2px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) top left/2px 26px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) top right/26px 2px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) top right/2px 26px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) bottom left/26px 2px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) bottom left/2px 26px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) bottom right/26px 2px no-repeat,
-    linear-gradient(var(--gold),var(--gold)) bottom right/2px 26px no-repeat}
-.hud-cross{position:absolute;top:50%;left:50%;width:54px;height:54px;transform:translate(-50%,-50%);
-  border:1px solid rgba(255,255,255,.7);border-radius:50%}
-.hud-cross:before,.hud-cross:after{content:"";position:absolute;background:rgba(255,255,255,.7)}
-.hud-cross:before{left:50%;top:-14px;bottom:-14px;width:1px}
-.hud-cross:after{top:50%;left:-14px;right:-14px;height:1px}
-.hud-text{position:absolute;right:34px;bottom:32px;font-size:.66rem;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.7)}
-.hud-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,19,38,.55),transparent 45%)}
-.hotspot{position:absolute;width:38px;height:38px;border-radius:50%;border:2px solid #fff;transform:translate(-50%,-50%) scaleY(.5);
-  background:rgba(255,255,255,.18)}
+.hud-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(11,19,38,.55),transparent 45%)}
+.hotspot{position:absolute;z-index:3;width:54px;height:54px;padding:0;border-radius:50%;border:2px solid #fff;cursor:pointer;
+  transform:translate(-50%,-50%) scale(var(--s,1)) scaleY(.42);background:rgba(255,255,255,.2);
+  transition:background .25s var(--ease),border-color .25s var(--ease)}
+.hotspot:hover,.hotspot:focus-visible{background:rgba(200,162,75,.75);border-color:var(--gold);outline:none}
 .hotspot:after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--gold);animation:svc-ring 2.4s ease-out infinite}
 .mock-bar{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:6px;z-index:4;
   background:rgba(11,19,38,.78);backdrop-filter:blur(8px);border:1px solid var(--hair-2);padding:6px;border-radius:999px}
@@ -284,8 +270,8 @@
   .mock-pill{padding:.38rem .55rem;font-size:.56rem}
 }
 @media (prefers-reduced-motion:reduce){
-  .pin-ring,.hotspot:after,.svc-kicker:before,.is-live .iso-wrap svg,.is-live .iso-scan{animation:none}
-  .iso-wrap,.is-live .iso-wrap{animation:none;filter:
+  .pin-ring,.hotspot:after,.svc-kicker:before,.is-live .iso-wrap svg,.tour-view.is-on .iso-wrap svg,.is-live .iso-scan{animation:none}
+  .iso-wrap,.is-live .iso-wrap,.tour-view.is-on .iso-wrap{animation:none;filter:
     drop-shadow(0 -3px 0 rgba(200,162,75,.8)) drop-shadow(0 -3px 0 rgba(200,162,75,.66))
     drop-shadow(0 -3px 0 rgba(200,162,75,.54)) drop-shadow(0 -3px 0 rgba(200,162,75,.42))
     drop-shadow(0 -3px 0 rgba(200,162,75,.3)) drop-shadow(0 30px 30px rgba(0,0,0,.6))}
@@ -294,3 +280,30 @@
 /* second sample stacked under the first, with a caption */
 .frame-2{margin-top:22px}
 .frame-cap{margin-top:.9rem;text-align:center;font-size:.98rem;color:#fff}
+
+/* ---------- interactive tour sample (walk / dollhouse / floor plan) ---------- */
+.tour-view{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
+.tour-view.is-on{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
+.tour-img{position:absolute;inset:0;opacity:0;transition:opacity .7s var(--ease),transform 1.1s var(--ease)}
+.tour-img.is-on{opacity:1}
+.tour-img.is-step{transform:scale(1.7)}
+.tour-room,.tour-hint{position:absolute;right:14px;top:14px;z-index:4;pointer-events:none;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
+  background:rgba(11,19,38,.72);backdrop-filter:blur(6px);border:1px solid var(--hair-2);padding:.34rem .6rem;border-radius:6px}
+.tour-view .iso-wrap{inset:0 0 44px}
+.tour-view .iso-floor{top:44%}
+.frame svg.tour-plan{padding:50px 18px 62px;color:#fff;--paper:#111c36}
+.tour-dot{cursor:pointer;outline:none}
+.tour-dot:hover .pin-dot,.tour-dot:focus-visible .pin-dot{fill:#fff}
+button.mock-pill{border:0;background:none;cursor:pointer;line-height:inherit;transition:background .25s var(--ease),color .25s var(--ease)}
+button.mock-pill:hover{background:rgba(255,255,255,.14)}
+button.mock-pill.on,button.mock-pill.on:hover{background:var(--gold);color:var(--ink)}
+button.mock-pill:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (max-width:520px){
+  .tour-hint{display:none}
+  .hotspot{width:44px;height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  .tour-img,.tour-view{transition:none}
+  .tour-img.is-step{transform:none}
+}
