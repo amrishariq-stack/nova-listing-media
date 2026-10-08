@@ -177,14 +177,9 @@
 /* showcase-style listing mock */
 .show{position:absolute;inset:0;display:flex;flex-direction:column;background:#fff}
 .show-main{position:relative;flex:1;min-height:0}
-.show-main img{position:absolute;inset:0}
 .show-tabs{position:absolute;left:14px;bottom:14px;display:flex;gap:6px;z-index:2;
   background:rgba(11,19,38,.78);backdrop-filter:blur(8px);padding:6px;border-radius:999px}
 .show-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:4px;height:24%;flex-shrink:0;background:var(--ink)}
-.show-strip span{position:relative;overflow:hidden;border-radius:3px;display:block}
-.show-strip img{position:absolute;inset:0}
-.show-strip .more{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.08);
-  font-family:var(--mono);font-size:.7rem;color:#fff;letter-spacing:.08em}
 
 /* property website mock (browser) */
 .browser{position:absolute;inset:0;display:flex;flex-direction:column;background:#fff}
@@ -289,4 +284,41 @@ button.mock-pill:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 }
 @media (prefers-reduced-motion:reduce){
   .tour-view,.tour-img{transition:none}
+}
+
+/* ---------- interactive showcase-style listing sample ---------- */
+.show-tabs{z-index:4}
+.show-view{position:absolute;inset:0;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility 0s .45s}
+.show-view.is-on{opacity:1;visibility:visible;transition:opacity .45s var(--ease)}
+.show-img{position:absolute;inset:0;opacity:0;transition:opacity .5s var(--ease)}
+.show-img.is-on{opacity:1}
+.show-arrow{position:absolute;top:50%;z-index:3;width:38px;height:38px;margin-top:-19px;padding:0 0 3px;border-radius:50%;cursor:pointer;
+  border:1px solid var(--hair-2);background:rgba(11,19,38,.72);backdrop-filter:blur(6px);color:#fff;font-size:1.4rem;line-height:1;
+  transition:background .25s var(--ease),color .25s var(--ease)}
+.show-arrow.prev{left:12px}
+.show-arrow.next{right:12px}
+.show-arrow:hover,.show-arrow:focus-visible{background:var(--gold);color:var(--ink);outline:none}
+.show-count{position:absolute;right:14px;top:14px;z-index:3;pointer-events:none;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;
+  background:rgba(11,19,38,.72);backdrop-filter:blur(6px);border:1px solid var(--hair-2);padding:.34rem .6rem;border-radius:6px}
+.show-count b{color:var(--gold);font-weight:400}
+/* 3D tour tab: an over-wide view that drifts side to side, as if looking around */
+.show-pan{position:absolute;top:0;bottom:0;left:0;width:135%}
+.show-pan img{position:absolute;inset:0}
+.show-view.is-on .show-pan{animation:show-pan 14s ease-in-out infinite alternate}
+@keyframes show-pan{from{transform:translateX(0)}to{transform:translateX(-25.9%)}}
+.frame svg.show-plan{padding:36px 10px 44px;color:#fff;--paper:#111c36}
+.show-thumb{position:relative;overflow:hidden;border-radius:3px;padding:0;border:0;cursor:pointer;background:none;opacity:.55;
+  transition:opacity .25s var(--ease)}
+.show-thumb img{position:absolute;inset:0}
+.show-thumb:hover,.show-thumb:focus-visible{opacity:1;outline:none}
+.show-thumb.on{opacity:1}
+.show-thumb.on:after{content:"";position:absolute;inset:0;border:2px solid var(--gold);border-radius:3px}
+@media (max-width:520px){
+  .show-count{display:none}
+  .show-arrow{width:32px;height:32px;margin-top:-16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .show-view,.show-img{transition:none}
+  .show-view.is-on .show-pan{animation:none}
 }
