@@ -12,10 +12,15 @@
     sync();
   });
 
-  /* tour sample: Walk / Dollhouse / Floor plan buttons switch the view */
+  /* tour sample: Walk / Dollhouse / Floor plan buttons switch the view;
+     the gold dots on the floor plan open that room in Walk */
   document.querySelectorAll("[data-tour]").forEach(function (tour) {
     var views = tour.querySelectorAll(".tour-view");
     var btns = tour.querySelectorAll("[data-view-btn]");
+    var imgs = tour.querySelectorAll(".tour-img");
+    var spots = tour.querySelectorAll(".hotspot");
+    var label = tour.querySelector(".tour-room");
+    var names = { kitchen: "Kitchen", living: "Living room" };
 
     function setView(name) {
       views.forEach(function (v) { v.classList.toggle("is-on", v.dataset.view === name); });
@@ -25,10 +30,15 @@
         b.setAttribute("aria-pressed", on);
       });
     }
+    function setRoom(room) {
+      imgs.forEach(function (i) { i.classList.toggle("is-on", i.dataset.room === room); });
+      spots.forEach(function (s) { s.hidden = s.dataset.room !== room; });
+      if (label) label.textContent = names[room] || "";
+    }
 
     btns.forEach(function (b) { b.addEventListener("click", function () { setView(b.dataset.viewBtn); }); });
     tour.querySelectorAll(".tour-dot").forEach(function (dot) {
-      var go = function () { setView("walk"); };
+      var go = function () { setRoom(dot.dataset.go); setView("walk"); };
       dot.addEventListener("click", go);
       dot.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }

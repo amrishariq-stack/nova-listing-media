@@ -282,7 +282,8 @@
 /* ---------- interactive tour sample (walk / dollhouse / floor plan) ---------- */
 .tour-view{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
 .tour-view.is-on{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
-.tour-img{position:absolute;inset:0}
+.tour-img{position:absolute;inset:0;opacity:0;transition:opacity .5s var(--ease)}
+.tour-img.is-on{opacity:1}
 .tour-room,.tour-hint{position:absolute;right:14px;top:14px;z-index:4;pointer-events:none;
   font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);
   background:rgba(11,19,38,.72);backdrop-filter:blur(6px);border:1px solid var(--hair-2);padding:.34rem .6rem;border-radius:6px}
@@ -300,5 +301,5 @@ button.mock-pill:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .hotspot{width:44px;height:44px}
 }
 @media (prefers-reduced-motion:reduce){
-  .tour-view{transition:none}
+  .tour-view,.tour-img{transition:none}
 }
