@@ -105,10 +105,18 @@
 .ln{fill:none;stroke:rgba(255,255,255,.55);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .ln-dim{fill:none;stroke:rgba(255,255,255,.2);stroke-width:1.5}
 .ln-gold{fill:rgba(200,162,75,.14);stroke:var(--gold);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.ln-wall{fill:none;stroke:#fff;stroke-width:6;stroke-linecap:square}
-.ln-wall-in{fill:none;stroke:rgba(255,255,255,.8);stroke-width:3;stroke-linecap:square}
 .lb{font-family:var(--mono);font-size:11px;letter-spacing:.08em;fill:rgba(255,255,255,.78);opacity:var(--lbl,1)}
 .lb.dimn{fill:var(--gold);font-size:9.5px}
+
+/* floor plan (shared by the 2D and 3D samples; colour comes from the svg) */
+.pw-ext{fill:none;stroke:currentColor;stroke-width:8;stroke-linejoin:miter}
+.pw-int{fill:none;stroke:currentColor;stroke-width:5}
+.fx{opacity:var(--fx,1)}
+.pd{fill:none;stroke:currentColor;stroke-width:1.2}
+.pwin{fill:var(--paper,#fff);stroke:currentColor;stroke-width:1.2}
+.pl{font-family:"Archivo",sans-serif;font-weight:700;font-size:10px;letter-spacing:.05em;fill:currentColor;text-anchor:middle}
+.pl.s{font-family:"Manrope",sans-serif;font-weight:600;font-size:8.5px;letter-spacing:.02em}
+.frame.paper{background:#fff;color:#1a1a1a;aspect-ratio:628/556}
 
 /* map pins */
 .pin-dot{fill:var(--gold)}
@@ -123,7 +131,7 @@
   filter:drop-shadow(0 -2px 0 rgba(200,162,75,.75)) drop-shadow(0 -2px 0 rgba(200,162,75,.6))
          drop-shadow(0 -2px 0 rgba(200,162,75,.5)) drop-shadow(0 -2px 0 rgba(200,162,75,.4))
          drop-shadow(0 -2px 0 rgba(200,162,75,.3)) drop-shadow(0 26px 30px rgba(0,0,0,.6))}
-.iso-wrap svg{width:74%;height:auto;--lbl:0;transform:rotateX(56deg) rotateZ(-38deg);overflow:visible}
+.iso-wrap svg{width:70%;height:auto;color:#fff;--fx:0;transform:rotateX(56deg) rotateZ(-38deg);overflow:visible}
 
 /* HUD overlays on photos */
 .hud{position:absolute;inset:0;z-index:3;pointer-events:none}

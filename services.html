@@ -33,19 +33,49 @@
   <!-- shared line-art used by the samples below -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
-      <symbol id="art-plan" viewBox="0 0 600 380">
-        <rect class="ln-wall" x="30" y="30" width="540" height="320"/>
-        <path class="ln-wall-in" d="M330 30V110M330 150V260M330 300V350M330 200H480M520 200H570M450 200V350M30 230H150"/>
-        <path class="ln-dim" d="M330 110A40 40 0 0 1 290 150M330 300A40 40 0 0 0 290 260M480 200A40 40 0 0 0 520 240"/>
-        <rect class="ln-dim" x="110" y="272" width="110" height="32"/>
-        <text class="lb" x="180" y="122" text-anchor="middle">LIVING</text>
-        <text class="lb dimn" x="180" y="140" text-anchor="middle">18' × 14'</text>
-        <text class="lb" x="180" y="332" text-anchor="middle">KITCHEN</text>
-        <text class="lb" x="450" y="108" text-anchor="middle">PRIMARY</text>
-        <text class="lb dimn" x="450" y="126" text-anchor="middle">15' × 13'</text>
-        <text class="lb" x="390" y="282" text-anchor="middle">BATH</text>
-        <text class="lb" x="510" y="282" text-anchor="middle">BED 2</text>
-      </symbol>
+      <!-- sample main-floor plan, 36' x 30', drawn at 13 units per foot -->
+      <g id="art-plan">
+        <rect class="pw-ext" x="150" y="110" width="468" height="390"/>
+        <path class="pw-int" d="M384 110V165M150 292H200M236 292H376M430 292H470M540 292H618M306 292V500M371 292V310M371 344V357M306 357H371M351.5 357V462M436 292V380M436 440V500"/>
+        <g class="fx">
+          <path class="pd" d="M254 110V32H371V110M254 40H236V70H254M242 40V70M248 40V70"/>
+          <rect class="pwin" x="272" y="106" width="84" height="8"/><path class="pd" d="M272 110H356M314 106V114"/>
+          <rect class="pwin" x="446" y="106" width="110" height="8"/><path class="pd" d="M446 110H556"/>
+          <rect class="pwin" x="614" y="160" width="8" height="72"/><path class="pd" d="M618 160V232"/>
+          <rect class="pwin" x="614" y="330" width="8" height="56"/><path class="pd" d="M618 330V386"/>
+          <rect class="pwin" x="478" y="496" width="104" height="8"/><path class="pd" d="M478 500H582"/>
+          <rect class="pwin" x="186" y="496" width="84" height="8"/><path class="pd" d="M186 500H270"/>
+          <rect class="pwin" x="146" y="372" width="8" height="70"/><path class="pd" d="M150 372V442"/>
+          <rect class="pwin" x="146" y="128" width="8" height="36"/><path class="pd" d="M150 128V164"/>
+          <rect class="pwin" x="146" y="248" width="8" height="36"/><path class="pd" d="M150 248V284"/>
+          <rect class="pwin" x="373" y="496" width="44" height="8"/>
+          <path class="pd" d="M375 500V460A40 40 0 0 1 415 500"/>
+          <path class="pd" d="M200 292V328A36 36 0 0 0 236 292"/>
+          <path class="pd" d="M371 310H337A34 34 0 0 0 371 344"/>
+          <rect class="pd" x="154" y="184" width="14" height="48"/><path class="pd" d="M154 196 168 184M154 208 168 196M154 220 168 208M154 232 168 220"/>
+          <path class="pd" d="M306 370H351.5M306 383H351.5M306 396H351.5M306 409H351.5M306 422H351.5M306 435H351.5M306 448H351.5M306 461H351.5M306 474H351.5M306 487H351.5M329 484V376M325 383 329 376 333 383"/>
+          <rect class="pd" x="318" y="296" width="30" height="13"/><circle class="pd" cx="333" cy="302.500" r="4"/>
+          <rect class="pd" x="310" y="331" width="7" height="18"/><ellipse class="pd" cx="326" cy="340" rx="9" ry="6.500"/>
+          <rect class="pd" x="592" y="298" width="22" height="124"/><rect class="pd" x="596" y="346" width="14" height="24"/>
+          <rect class="pd" x="440" y="298" width="22" height="76"/><path class="pd" d="M440 322H462M440 350H462M446 328V344M456 328V344"/>
+          <rect class="pd" x="500" y="346" width="64" height="30"/>
+          <circle class="pd" cx="585" cy="462" r="13"/>
+          <text class="pl" x="312" y="66">DECK</text><text class="pl s" x="312" y="78">9' × 6'</text>
+          <text class="pl" x="267" y="200">LIVING ROOM</text><text class="pl s" x="267" y="212">18' × 14'</text>
+          <text class="pl" x="501" y="200">DINING ROOM</text><text class="pl s" x="501" y="212">18' × 14'</text>
+          <text class="pl" x="228" y="392">STUDY</text><text class="pl s" x="228" y="404">12' × 16'</text>
+          <text class="pl s" x="326" y="323">BATH</text>
+          <text class="pl s" x="405" y="326">HALL</text>
+          <text class="pl" x="394" y="414">FOYER</text><text class="pl s" x="394" y="426">6'6" × 11'</text>
+          <text class="pl s" x="329" y="496" style="font-size:7px">UP</text>
+          <text class="pl" x="527" y="320">KITCHEN</text><text class="pl s" x="527" y="332">14' × 10'</text>
+          <text class="pl" x="505" y="452">BREAKFAST NOOK</text><text class="pl s" x="505" y="464">14' × 6'</text>
+          <text class="pl" x="150" y="528" style="text-anchor:start">MAIN FLOOR</text>
+          <text class="pl" x="384" y="542">TOTAL: 1,080 sq. ft</text>
+          <text class="pl s" x="384" y="554">EXCLUDED AREA — DECK: 54 sq. ft</text>
+          <text class="pl s" x="384" y="567" style="font-size:7px;font-style:italic">SIZES AND DIMENSIONS ARE APPROXIMATE, ACTUAL MAY VARY.</text>
+        </g>
+      </g>
     </defs>
   </svg>
 
@@ -228,9 +258,9 @@
   <section class="svc" id="plans-2d">
     <div class="wrap svc-row">
       <div class="svc-visual" data-animation="scale-up">
-        <figure class="frame r16 art">
+        <figure class="frame paper">
           <span class="frame-tag"><b>Sample</b> · 2D plan</span>
-          <svg class="pad" viewBox="0 0 600 380" role="img" aria-label="Sample two-dimensional floor plan with labelled rooms and dimensions"><use href="#art-plan"/></svg>
+          <svg viewBox="70 18 628 556" role="img" aria-label="Sample main-floor plan showing living room, dining room, kitchen, breakfast nook, study, bath, foyer and deck with dimensions"><use href="#art-plan"/></svg>
         </figure>
       </div>
       <div class="svc-copy" data-animation="fade-up">
@@ -258,7 +288,7 @@
         <figure class="frame r16 art">
           <span class="frame-tag"><b>Sample</b> · 3D plan</span>
           <div class="iso-wrap">
-            <svg viewBox="0 0 600 380" role="img" aria-label="Sample three-dimensional floor plan shown at an angle with raised walls"><use href="#art-plan"/></svg>
+            <svg viewBox="140 100 488 410" role="img" aria-label="Sample three-dimensional floor plan shown at an angle with raised walls"><use href="#art-plan"/></svg>
           </div>
         </figure>
       </div>
