@@ -196,22 +196,6 @@
 .browser-row span{position:relative;overflow:hidden;border-radius:4px;display:block}
 .browser-row img{position:absolute;inset:0}
 
-/* agent brand kit mock */
-.kit{position:absolute;inset:0;display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;padding:24px;align-items:center}
-.kit-card{background:#fff;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:9px}
-.kit-id{display:flex;align-items:center;gap:10px;margin-bottom:6px}
-.kit-av{width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--gold);flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:800;font-size:.9rem;
-  box-shadow:0 0 0 2px #fff,0 0 0 4px var(--gold)}
-.kit-handle{font-family:var(--mono);font-size:.66rem;color:var(--gold-deep)}
-.kit-sw{display:flex;gap:6px;margin-top:6px}
-.kit-sw i{flex:1;height:22px;border-radius:5px;display:block}
-.kit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.kit-grid span{position:relative;aspect-ratio:1;overflow:hidden;border-radius:5px;display:block}
-.kit-grid img{position:absolute;inset:0}
-.kit-grid em{position:absolute;left:0;right:0;bottom:0;padding:5px 6px;background:var(--ink);color:var(--gold);
-  font-family:'Archivo',sans-serif;font-style:normal;font-weight:800;font-size:.5rem;letter-spacing:.1em;text-transform:uppercase}
-
 /* social video phones (re-uses .phone from the main sheet) */
 .svc-phones{display:flex;justify-content:center;align-items:flex-end;gap:clamp(10px,1.6vw,20px)}
 .svc-phones .phone{width:clamp(120px,13.5vw,178px);border-radius:26px;border-width:5px}
@@ -243,9 +227,6 @@
   .svc-phones .phone{width:30%}
 }
 @media (max-width:520px){
-  .kit{grid-template-columns:1fr;padding:16px}
-  .kit-card{display:none}
-  .frame.kit-frame{aspect-ratio:3/2}
   .svc-cta .btn{width:auto;flex:1}
   .mock-pill{padding:.38rem .55rem;font-size:.56rem}
 }
@@ -321,4 +302,52 @@ button.mock-pill:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){
   .show-view,.show-img{transition:none}
   .show-view.is-on .show-pan{animation:none}
+}
+
+/* ---------- agent branding sample: brand kit + sample videos ---------- */
+.brand-top{display:grid;grid-template-columns:1fr 1.15fr;gap:18px;align-items:start}
+.brand-reels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.frame.v916{aspect-ratio:9/16}
+.frame.kit2{aspect-ratio:1.6}
+.kit2-body{position:absolute;inset:0;padding:50px 16px 14px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.kit-id{display:flex;align-items:center;gap:12px}
+.frame .kit-av{width:50px;height:50px;border-radius:50%;object-fit:cover;flex-shrink:0;
+  box-shadow:0 0 0 2px var(--deep-2),0 0 0 4px var(--gold)}
+.kit-who{display:flex;flex-direction:column;gap:2px;min-width:0}
+.kit-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:1rem;color:#fff;text-transform:uppercase;letter-spacing:-.01em}
+.kit-handle{font-family:var(--mono);font-size:.66rem;color:var(--gold)}
+/* three brand colours take turns stepping forward, with a light sweep across the active one */
+.kit-sw{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sw{display:flex;flex-direction:column;gap:6px;animation:sw-lift 4.2s var(--ease) var(--d) infinite}
+.sw i{position:relative;display:block;height:34px;border-radius:7px;background:var(--c);overflow:hidden;
+  border:1px solid rgba(255,255,255,.18);animation:sw-glow 4.2s var(--ease) var(--d) infinite}
+.sw i:after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:50%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  animation:sw-sweep 4.2s ease-in-out var(--d) infinite}
+.sw b{font-family:var(--mono);font-weight:400;font-size:.58rem;letter-spacing:.06em;color:rgba(255,255,255,.55);
+  animation:sw-code 4.2s var(--ease) var(--d) infinite}
+@keyframes sw-lift{0%,34%,100%{transform:none}8%,26%{transform:translateY(-6px)}}
+@keyframes sw-glow{0%,34%,100%{box-shadow:none}8%,26%{box-shadow:0 0 0 2px var(--gold),0 10px 22px -6px rgba(200,162,75,.7)}}
+@keyframes sw-sweep{0%,4%{left:-60%}30%,100%{left:120%}}
+@keyframes sw-code{0%,34%,100%{color:rgba(255,255,255,.55)}8%,26%{color:var(--gold)}}
+/* click-to-play overlay */
+.vid-play{position:absolute;inset:0;z-index:3;width:100%;padding:0;border:0;cursor:pointer;
+  background:linear-gradient(to top,rgba(11,19,38,.6),transparent 45%)}
+.vid-play:before{content:"";position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;
+  background:rgba(11,19,38,.6);border:1.5px solid rgba(255,255,255,.75);backdrop-filter:blur(4px);
+  transition:background .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease)}
+.vid-play:after{content:"";position:absolute;top:50%;left:50%;margin:-9px 0 0 -5px;
+  border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.vid-play:hover:before,.vid-play:focus-visible:before{background:var(--gold);border-color:var(--gold);transform:scale(1.08)}
+.vid-play:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.is-playing .vid-play{display:none}
+.brand-reels .frame-cap,.brand-top .frame-cap{font-size:.9rem;margin-top:.7rem}
+@media (max-width:520px){
+  .brand-top{grid-template-columns:1fr}
+  .brand-reels{gap:8px}
+  .brand-reels .frame-cap{font-size:.76rem}
+  .vid-play:before{width:42px;height:42px;margin:-21px 0 0 -21px}
+}
+@media (prefers-reduced-motion:reduce){
+  .sw,.sw i,.sw i:after,.sw b{animation:none}
 }

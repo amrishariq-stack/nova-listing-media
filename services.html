@@ -577,24 +577,51 @@
   <section class="svc" id="branding">
     <div class="wrap svc-row">
       <div class="svc-visual" data-animation="scale-up">
-        <figure class="frame r16 art kit-frame">
-          <span class="frame-tag"><b>Sample</b> · brand kit + feed</span>
-          <div class="kit" role="img" aria-label="Sample agent brand kit with profile, brand colours and a branded social media feed">
-            <div class="kit-card">
-              <div class="kit-id"><span class="kit-av">YN</span><span style="flex:1;display:flex;flex-direction:column;gap:6px"><span class="sk dk w80"></span><span class="kit-handle">@youragenthandle</span></span></div>
-              <span class="sk w100"></span><span class="sk w80"></span><span class="sk w60"></span>
-              <div class="kit-sw"><i style="background:#16223d"></i><i style="background:#c8a24b"></i><i style="background:#f7f5ef;border:1px solid #dcd6c7"></i></div>
+        <div class="brand-top">
+          <figure class="frame art kit2">
+            <span class="frame-tag"><b>Sample</b> · brand kit</span>
+            <div class="kit2-body">
+              <div class="kit-id">
+                <img class="kit-av" src="assets/agent-profile.jpg" alt="Sample agent profile picture" loading="lazy">
+                <span class="kit-who"><span class="kit-name">Your Name</span><span class="kit-handle">@youragenthandle</span></span>
+              </div>
+              <div class="kit-sw" role="img" aria-label="Three brand colours: navy, gold and warm white">
+                <span class="sw" style="--c:#16223d;--d:0s"><i></i><b>#16223D</b></span>
+                <span class="sw" style="--c:#c8a24b;--d:1.4s"><i></i><b>#C8A24B</b></span>
+                <span class="sw" style="--c:#f7f5ef;--d:2.8s"><i></i><b>#F7F5EF</b></span>
+              </div>
             </div>
-            <div class="kit-grid">
-              <span><img src="assets/work/p1.jpg" alt="" loading="lazy"><em>Just listed</em></span>
-              <span><img src="assets/work/p2.jpg" alt="" loading="lazy"></span>
-              <span><img src="assets/reels/reel1.jpg" alt="" loading="lazy"><em>Open house</em></span>
-              <span><img src="assets/work/p3.jpg" alt="" loading="lazy"></span>
-              <span><img src="assets/reels/reel2.jpg" alt="" loading="lazy"><em>Market update</em></span>
-              <span><img src="assets/work/p4.jpg" alt="" loading="lazy"></span>
-            </div>
+          </figure>
+          <div class="vid-cell">
+            <figure class="frame" style="aspect-ratio:768/416">
+              <video src="videos/web/open-house.mp4" poster="assets/posters/open-house.jpg" autoplay loop muted playsinline preload="none" aria-label="Open house sample video"></video>
+            </figure>
+            <div class="frame-cap">Open house</div>
           </div>
-        </figure>
+        </div>
+        <div class="brand-reels">
+          <div class="vid-cell">
+            <figure class="frame v916" data-play>
+              <video src="videos/web/agent-headshot.mp4" poster="assets/posters/agent-headshot.jpg" preload="none" playsinline></video>
+              <button type="button" class="vid-play" aria-label="Play the agent head shot sample with sound"></button>
+            </figure>
+            <div class="frame-cap">Agent head shot</div>
+          </div>
+          <div class="vid-cell">
+            <figure class="frame v916" data-play>
+              <video src="videos/web/market-update.mp4" poster="assets/posters/market-update.jpg" preload="none" playsinline></video>
+              <button type="button" class="vid-play" aria-label="Play the market update sample with sound"></button>
+            </figure>
+            <div class="frame-cap">Market update</div>
+          </div>
+          <div class="vid-cell">
+            <figure class="frame v916" data-play>
+              <video src="videos/web/agent-social.mp4" poster="assets/posters/agent-social.jpg" preload="none" playsinline></video>
+              <button type="button" class="vid-play" aria-label="Play the agent social content sample with sound"></button>
+            </figure>
+            <div class="frame-cap">Agent social content</div>
+          </div>
+        </div>
       </div>
       <div class="svc-copy" data-animation="fade-up">
         <span class="svc-num">13</span>

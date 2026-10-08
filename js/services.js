@@ -85,6 +85,29 @@
     });
   });
 
+  /* click-to-play sample videos (with sound); only one plays at a time */
+  var players = document.querySelectorAll("[data-play]");
+  players.forEach(function (fig) {
+    var video = fig.querySelector("video");
+    var btn = fig.querySelector(".vid-play");
+    if (!video || !btn) return;
+    btn.addEventListener("click", function () {
+      players.forEach(function (other) {
+        var v = other.querySelector("video");
+        if (v && v !== video) v.pause();
+      });
+      video.controls = true;
+      fig.classList.add("is-playing");
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+    video.addEventListener("ended", function () {
+      video.controls = false;
+      video.load();               // back to the poster frame
+      fig.classList.remove("is-playing");
+    });
+  });
+
   /* samples marked data-live only animate while they are on screen */
   var live = document.querySelectorAll("[data-live]");
   if ("IntersectionObserver" in window) {
