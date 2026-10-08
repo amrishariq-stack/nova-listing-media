@@ -39,6 +39,9 @@
       syncClear();
       pkgInput.focus();
     });
+    /* arriving from a "Book this service" button: index.html?service=…#contact */
+    var asked = new URLSearchParams(window.location.search).get("service");
+    if (asked) { pkgInput.value = asked; syncClear(); }
     document.querySelectorAll("[data-package]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         pkgInput.value = btn.getAttribute("data-package");

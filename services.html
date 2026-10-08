@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services — NoVA Listing Media</title>
-<meta name="description" content="Real estate media services from NoVA Listing Media.">
+<meta name="description" content="HDR photography, video, drone, floor plans, 3D tours, virtual staging, print and social media content for real estate listings, from NoVA Listing Media.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/services.css">
 </head>
 <body id="top">
 
@@ -26,14 +27,580 @@
   </div>
 </header>
 
-<!-- PAGE CONTENT (to be added) -->
-<main class="page-empty">
-  <div class="page-head">
-    <div class="wrap">
-      <h1 class="h-section">Services</h1>
+<!-- SERVICES -->
+<main class="svc-page">
+
+  <!-- shared line-art used by the samples below -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="art-room" viewBox="0 0 800 500">
+        <path class="ln-dim" d="M0 0 200 90M800 0 600 90M0 500 200 330M800 500 600 330M300 330 180 500M400 330 400 500M500 330 620 500"/>
+        <rect class="ln" x="200" y="90" width="400" height="240"/>
+        <rect class="ln" x="340" y="140" width="120" height="120"/>
+        <path class="ln-dim" d="M400 140V260M340 200H460"/>
+      </symbol>
+      <symbol id="art-plan" viewBox="0 0 600 380">
+        <rect class="ln-wall" x="30" y="30" width="540" height="320"/>
+        <path class="ln-wall-in" d="M330 30V110M330 150V260M330 300V350M330 200H480M520 200H570M450 200V350M30 230H150"/>
+        <path class="ln-dim" d="M330 110A40 40 0 0 1 290 150M330 300A40 40 0 0 0 290 260M480 200A40 40 0 0 0 520 240"/>
+        <rect class="ln-dim" x="110" y="272" width="110" height="32"/>
+        <text class="lb" x="180" y="122" text-anchor="middle">LIVING</text>
+        <text class="lb dimn" x="180" y="140" text-anchor="middle">18' × 14'</text>
+        <text class="lb" x="180" y="332" text-anchor="middle">KITCHEN</text>
+        <text class="lb" x="450" y="108" text-anchor="middle">PRIMARY</text>
+        <text class="lb dimn" x="450" y="126" text-anchor="middle">15' × 13'</text>
+        <text class="lb" x="390" y="282" text-anchor="middle">BATH</text>
+        <text class="lb" x="510" y="282" text-anchor="middle">BED 2</text>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- HERO + INDEX -->
+  <section class="svc-hero">
+    <div class="wrap" data-animation="fade-up">
+      <span class="svc-kicker">Services · 14</span>
+      <h1>One shoot.<span class="thin">Every asset your listing needs.</span></h1>
+      <p class="svc-intro">Photos, video, plans, tours, print and social — captured by one team and delivered together. Pick a service to see a sample.</p>
+      <nav class="svc-index" aria-label="All services">
+        <a href="#hdr"><span class="n">01</span>HDR Photography</a>
+        <a href="#video"><span class="n">02</span>Videography</a>
+        <a href="#neighborhood"><span class="n">03</span>Neighborhood Photography</a>
+        <a href="#staging"><span class="n">04</span>Virtual Staging</a>
+        <a href="#plans-2d"><span class="n">05</span>2D Floor Plans</a>
+        <a href="#plans-3d"><span class="n">06</span>3D Floor Plans</a>
+        <a href="#tours"><span class="n">07</span>3D Virtual Tours</a>
+        <a href="#drone"><span class="n">08</span>Drone Photo &amp; Video</a>
+        <a href="#print"><span class="n">09</span>Flyers &amp; Brochures</a>
+        <a href="#editorial"><span class="n">10</span>Editorial Photography</a>
+        <a href="#showcase"><span class="n">11</span>Zillow Showcase</a>
+        <a href="#property-site"><span class="n">12</span>Property Website</a>
+        <a href="#branding"><span class="n">13</span>Agent Branding &amp; Social Media</a>
+        <a href="#social-video"><span class="n">14</span>Social Media Videos</a>
+      </nav>
     </div>
-  </div>
+  </section>
+
+  <!-- 01 HDR -->
+  <section class="svc" id="hdr">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16">
+          <span class="frame-tag"><b>Sample</b> · drag to compare</span>
+          <div class="ba">
+            <div class="ba-layer"><img src="assets/work/p2.jpg" alt="Living room after HDR editing" loading="lazy"></div>
+            <div class="ba-layer ba-before"><img class="is-flat" src="assets/work/p2.jpg" alt="" loading="lazy"></div>
+            <span class="ba-label l">Before</span><span class="ba-label r">HDR edit</span>
+            <span class="ba-handle" aria-hidden="true"><span class="ba-knob">‹›</span></span>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Compare the photo before and after HDR editing">
+            <span class="ba-focus"></span>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">01 / 14</span>
+        <h2>HDR Photography</h2>
+        <p class="svc-lead">Bright, true-to-life photos that keep the detail in the windows and in the shadows.</p>
+        <ul class="svc-list">
+          <li>Several exposures blended into every finished shot</li>
+          <li>Interior and exterior coverage</li>
+          <li>Colour corrected, with vertical lines straightened</li>
+          <li>Blue-sky replacement on exteriors</li>
+          <li>MLS-sized and high-resolution files</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=HDR%20Photography#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 VIDEO -->
+  <section class="svc" id="video">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16">
+          <span class="frame-tag"><b>Sample</b> · walkthrough film</span>
+          <video src="videos/web/house2.mp4" poster="assets/posters/house2.jpg" autoplay loop muted playsinline preload="none"></video>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">02 / 14</span>
+        <h2>Videography</h2>
+        <p class="svc-lead">A cinematic walkthrough that shows how the home flows from room to room.</p>
+        <ul class="svc-list">
+          <li>Smooth, stabilised movement through the home</li>
+          <li>Edited and colour graded to match your photos</li>
+          <li>Horizontal cut for MLS, YouTube and your property website</li>
+          <li>Pairs with drone footage and social media cuts</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Videography#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 NEIGHBORHOOD -->
+  <section class="svc" id="neighborhood">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16 art">
+          <span class="frame-tag"><b>Sample</b> · coverage map</span>
+          <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated map showing a listing and nearby parks, schools, dining and transit">
+            <path d="M520 -10C560 100 470 220 560 410" fill="none" stroke="rgba(200,162,75,.22)" stroke-width="20"/>
+            <path class="road" stroke-width="14" d="M-10 120H650"/>
+            <path class="road" stroke-width="10" d="M-10 290H650"/>
+            <path class="road" stroke-width="12" d="M150 -10V410"/>
+            <path class="road" stroke-width="10" d="M430 -10V410"/>
+            <path class="road" stroke-width="7" d="M-10 380 300 205 650 60"/>
+            <rect class="park" x="182" y="146" width="206" height="112" rx="14"/>
+            <circle class="park" cx="330" cy="212" r="22"/>
+            <g><circle class="pin-ring" cx="92" cy="208" r="12"/><circle class="pin-ring" cx="92" cy="208" r="12" style="animation-delay:1.2s"/><circle class="pin-dot" cx="92" cy="208" r="8"/><circle cx="92" cy="208" r="3" fill="#0b1326"/></g>
+            <g class="chip"><rect x="30" y="226" width="124" height="24" rx="12"/><text class="lb" x="92" y="242" text-anchor="middle" style="fill:#c8a24b">YOUR LISTING</text></g>
+            <g class="chip"><circle class="pin-dot" cx="262" cy="176" r="5"/><rect x="274" y="164" width="104" height="24" rx="12"/><text class="lb" x="326" y="180" text-anchor="middle">PARKS</text></g>
+            <g class="chip"><circle class="pin-dot" cx="470" cy="196" r="5"/><rect x="482" y="184" width="104" height="24" rx="12"/><text class="lb" x="534" y="200" text-anchor="middle">SCHOOLS</text></g>
+            <g class="chip"><circle class="pin-dot" cx="212" cy="330" r="5"/><rect x="224" y="318" width="150" height="24" rx="12"/><text class="lb" x="299" y="334" text-anchor="middle">COFFEE &amp; DINING</text></g>
+            <g class="chip"><circle class="pin-dot" cx="430" cy="76" r="5"/><rect x="442" y="64" width="104" height="24" rx="12"/><text class="lb" x="494" y="80" text-anchor="middle">TRANSIT</text></g>
+          </svg>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">03 / 14</span>
+        <h2>Neighborhood Photography</h2>
+        <p class="svc-lead">Sell the location as well as the house. Buyers choose a street and a lifestyle, not only a floor plan.</p>
+        <ul class="svc-list">
+          <li>Parks, trails, schools, shops, dining and transit near the listing</li>
+          <li>Community amenities such as pools, clubhouses and entrances</li>
+          <li>Edited to match your listing photos</li>
+          <li>Ready for MLS, your property website and social posts</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Neighborhood%20Photography#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 VIRTUAL STAGING -->
+  <section class="svc" id="staging">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16 art">
+          <span class="frame-tag"><b>Sample</b> · drag to stage the room</span>
+          <div class="ba" style="--pos:38%">
+            <div class="ba-layer">
+              <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a room after virtual staging, with sofa, rug, table, lamp and art">
+                <use href="#art-room"/>
+                <path class="ln-gold" d="M250 450 550 450 505 365 295 365Z"/>
+                <rect class="ln-gold" x="262" y="278" width="236" height="54" rx="10"/>
+                <rect class="ln-gold" x="248" y="320" width="264" height="44" rx="10"/>
+                <rect class="ln-gold" x="238" y="300" width="30" height="64" rx="9"/>
+                <rect class="ln-gold" x="492" y="300" width="30" height="64" rx="9"/>
+                <rect class="ln-gold" x="330" y="392" width="140" height="22" rx="5"/>
+                <path class="ln-gold" d="M344 414V432M456 414V432"/>
+                <path class="ln-gold" d="M566 332V214M546 214H586L578 184H554Z"/>
+                <rect class="ln-gold" x="504" y="150" width="72" height="50"/>
+                <rect class="ln-gold" x="212" y="318" width="26" height="26" rx="3"/>
+                <path class="ln-gold" d="M225 318C215 290 205 282 198 268M225 318C226 286 232 272 240 258M225 318C238 296 248 292 256 284"/>
+              </svg>
+            </div>
+            <div class="ba-layer ba-before" style="background:#111c36">
+              <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#art-room"/></svg>
+            </div>
+            <span class="ba-label l">Empty</span><span class="ba-label r">Staged</span>
+            <span class="ba-handle" aria-hidden="true"><span class="ba-knob">‹›</span></span>
+            <input class="ba-range" type="range" min="0" max="100" value="38" aria-label="Compare the empty room with the virtually staged room">
+            <span class="ba-focus"></span>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">04 / 14</span>
+        <h2>Virtual Staging</h2>
+        <p class="svc-lead">Empty rooms furnished digitally, so buyers see how the space lives instead of how big it is.</p>
+        <ul class="svc-list">
+          <li>Furniture, rugs, art and lighting added to your photos</li>
+          <li>Style chosen to suit the home and its likely buyer</li>
+          <li>No rental furniture, movers or scheduling</li>
+          <li>Original unstaged photos delivered alongside</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Virtual%20Staging#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 2D FLOOR PLANS -->
+  <section class="svc" id="plans-2d">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16 art">
+          <span class="frame-tag"><b>Sample</b> · 2D plan</span>
+          <svg class="pad" viewBox="0 0 600 380" role="img" aria-label="Sample two-dimensional floor plan with labelled rooms and dimensions"><use href="#art-plan"/></svg>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">05 / 14</span>
+        <h2>2D Floor Plans</h2>
+        <p class="svc-lead">A clean, labelled layout that answers the first question every buyer asks: how does it fit together?</p>
+        <ul class="svc-list">
+          <li>Measured on site during your shoot</li>
+          <li>Room names and dimensions on every level</li>
+          <li>Image and PDF files for MLS and print</li>
+          <li>Drops straight into flyers and your property website</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=2D%20Floor%20Plan#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 3D FLOOR PLANS -->
+  <section class="svc" id="plans-3d">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16 art">
+          <span class="frame-tag"><b>Sample</b> · 3D plan</span>
+          <div class="iso-wrap">
+            <svg viewBox="0 0 600 380" role="img" aria-label="Sample three-dimensional floor plan shown at an angle with raised walls"><use href="#art-plan"/></svg>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">06 / 14</span>
+        <h2>3D Floor Plans</h2>
+        <p class="svc-lead">The same measured layout, lifted into three dimensions so the space reads at a glance.</p>
+        <ul class="svc-list">
+          <li>Angled view with walls, doors and windows raised</li>
+          <li>Built from the same on-site measurements as the 2D plan</li>
+          <li>Helps out-of-town buyers picture the home</li>
+          <li>Image files sized for MLS and social</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=3D%20Floor%20Plan#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 3D VIRTUAL TOURS -->
+  <section class="svc" id="tours">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16">
+          <span class="frame-tag"><b>Sample</b> · tour interface</span>
+          <img src="assets/work/p3.jpg" alt="Kitchen view inside a sample 3D virtual tour" loading="lazy">
+          <div class="hud">
+            <span class="hud-shade"></span>
+            <span class="hotspot" style="left:36%;top:80%"></span>
+            <span class="hotspot" style="left:63%;top:70%"></span>
+            <span class="hotspot" style="left:86%;top:62%"></span>
+          </div>
+          <div class="mock-bar" aria-hidden="true"><span class="mock-pill on">Walk</span><span class="mock-pill">Dollhouse</span><span class="mock-pill">Floor plan</span></div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">07 / 14</span>
+        <h2>3D Virtual Tours</h2>
+        <p class="svc-lead">An open house that never closes. Buyers walk the home from their phone, room by room.</p>
+        <ul class="svc-list">
+          <li>Every room scanned and linked into one walkable tour</li>
+          <li>Works on phone, tablet and desktop — nothing to install</li>
+          <li>One link to add to MLS and your property website</li>
+          <li>Stays live for as long as the listing does</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=3D%20Virtual%20Tour#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 DRONE -->
+  <section class="svc" id="drone">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16">
+          <span class="frame-tag"><b>Sample</b> · aerial frame</span>
+          <img src="assets/work/p1.jpg" alt="Exterior of a modern home framed for an aerial shot" loading="lazy">
+          <div class="hud">
+            <span class="hud-shade"></span>
+            <span class="hud-corners"></span>
+            <span class="hud-cross"></span>
+            <span class="hud-text">Aerial · photo + video</span>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">08 / 14</span>
+        <h2>Drone Photography &amp; Videography</h2>
+        <p class="svc-lead">The view no ground-level photo can give: the lot, the roofline and everything around it.</p>
+        <ul class="svc-list">
+          <li>Aerial photos of the home, lot lines and surroundings</li>
+          <li>Aerial video clips, on their own or cut into your walkthrough</li>
+          <li>Strong cover shots for MLS and social</li>
+          <li>Flown on the same visit as your photo shoot, weather permitting</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Drone%20Photo%20%26%20Video#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 FLYERS & BROCHURES -->
+  <section class="svc" id="print">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16 art">
+          <span class="frame-tag"><b>Sample</b> · flyer + brochure layout</span>
+          <div class="print-stage" role="img" aria-label="Sample listing flyer and brochure layouts built from listing photos">
+            <div class="sheet s1">
+              <span class="ph"><img src="assets/work/p4.jpg" alt="" loading="lazy"></span>
+              <span class="bd"><span class="sk gd w30"></span><span class="sk dk w80"></span><span class="sk w100"></span><span class="sk w60"></span></span>
+              <span class="ft"><span class="av"></span><span class="sk lt w60"></span></span>
+            </div>
+            <div class="sheet s2">
+              <span class="ph" style="height:52%"><img src="assets/work/p1.jpg" alt="" loading="lazy"></span>
+              <span class="bd"><span class="sk gd w45"></span><span class="sk dk w100"></span><span class="sk w80"></span><span class="sk w60"></span></span>
+              <span class="ft"><span class="av"></span><span class="sk lt w45"></span></span>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">09 / 14</span>
+        <h2>Flyers &amp; Brochures</h2>
+        <p class="svc-lead">Open-house handouts designed from your listing photos, so the print matches everything else.</p>
+        <ul class="svc-list">
+          <li>One-page flyers and multi-page brochures</li>
+          <li>Your name, photo, brokerage and contact details</li>
+          <li>Print-ready PDF plus a version for email and social</li>
+          <li>Floor plan and QR code to the property website on request</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Flyers%20%26%20Brochures#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 EDITORIAL -->
+  <section class="svc" id="editorial">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16 art">
+          <span class="frame-tag"><b>Sample</b> · editorial set</span>
+          <div class="ed">
+            <span><img src="assets/reels/reel3.jpg" alt="Kitchen detail composed as an editorial vertical" loading="lazy"></span>
+            <span><img src="assets/work/p4.jpg" alt="Primary suite composed as an editorial wide shot" loading="lazy"></span>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">10 / 14</span>
+        <h2>Editorial Photography</h2>
+        <p class="svc-lead">Slower, composed, magazine-style images for homes and projects where the details are the story.</p>
+        <ul class="svc-list">
+          <li>Styled, carefully lit compositions rather than quick coverage</li>
+          <li>Detail shots of materials, finishes and craftsmanship</li>
+          <li>Suited to luxury listings, builders and interior designers</li>
+          <li>Hand-finished retouching on every frame</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Editorial%20Photography#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 ZILLOW SHOWCASE -->
+  <section class="svc" id="showcase">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16">
+          <span class="frame-tag"><b>Sample</b> · showcase-style listing</span>
+          <div class="show" role="img" aria-label="Sample layout of a showcase-style listing with a large hero photo, media tabs and photo strip">
+            <div class="show-main">
+              <img src="assets/work/p2.jpg" alt="" loading="lazy">
+              <div class="show-tabs"><span class="mock-pill on">Photos</span><span class="mock-pill">3D tour</span><span class="mock-pill">Floor plan</span></div>
+            </div>
+            <div class="show-strip">
+              <span><img src="assets/work/p1.jpg" alt="" loading="lazy"></span>
+              <span><img src="assets/work/p3.jpg" alt="" loading="lazy"></span>
+              <span><img src="assets/work/p4.jpg" alt="" loading="lazy"></span>
+              <span class="more">+ more</span>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">11 / 14</span>
+        <h2>Zillow Showcase</h2>
+        <p class="svc-lead">The media Zillow's premium listing format is built around, captured in one visit.</p>
+        <ul class="svc-list">
+          <li>Wide, high-resolution hero photography</li>
+          <li>Interactive 3D tour of the home</li>
+          <li>Interactive floor plan linked to the photos</li>
+          <li>Delivered ready for your Showcase listing</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Zillow%20Showcase#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 PROPERTY WEBSITE -->
+  <section class="svc" id="property-site">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16">
+          <span class="frame-tag" style="top:50px"><b>Sample</b> · single-listing site</span>
+          <div class="browser" role="img" aria-label="Sample single-property website shown in a browser window">
+            <div class="browser-bar"><i></i><i></i><i></i><span class="mock-url">your-listing-address.com</span></div>
+            <div class="browser-hero">
+              <img src="assets/work/p1.jpg" alt="" loading="lazy">
+              <div class="ov"><span class="sk gd w30" style="height:6px"></span><span class="sk wh w60"></span><span class="sk lt w45" style="height:8px"></span>
+                <div class="btns"><span class="mock-pill on">Schedule a showing</span><span class="mock-pill" style="border:1px solid rgba(255,255,255,.5)">Take the tour</span></div>
+              </div>
+            </div>
+            <div class="browser-row">
+              <span><img src="assets/work/p2.jpg" alt="" loading="lazy"></span>
+              <span><img src="assets/work/p3.jpg" alt="" loading="lazy"></span>
+              <span><img src="assets/work/p4.jpg" alt="" loading="lazy"></span>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">12 / 14</span>
+        <h2>Property Website</h2>
+        <p class="svc-lead">One link that holds the whole listing: photos, video, tour, floor plan and your contact details.</p>
+        <ul class="svc-list">
+          <li>A dedicated page for a single listing</li>
+          <li>Branded version with your name and details</li>
+          <li>Unbranded version for MLS</li>
+          <li>Easy to share by text, email, QR code and social</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Property%20Website#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 AGENT BRANDING & SOCIAL MEDIA MARKETING -->
+  <section class="svc" id="branding">
+    <div class="wrap svc-row">
+      <div class="svc-visual" data-animation="scale-up">
+        <figure class="frame r16 art kit-frame">
+          <span class="frame-tag"><b>Sample</b> · brand kit + feed</span>
+          <div class="kit" role="img" aria-label="Sample agent brand kit with profile, brand colours and a branded social media feed">
+            <div class="kit-card">
+              <div class="kit-id"><span class="kit-av">YN</span><span style="flex:1;display:flex;flex-direction:column;gap:6px"><span class="sk dk w80"></span><span class="kit-handle">@youragenthandle</span></span></div>
+              <span class="sk w100"></span><span class="sk w80"></span><span class="sk w60"></span>
+              <div class="kit-sw"><i style="background:#16223d"></i><i style="background:#c8a24b"></i><i style="background:#f7f5ef;border:1px solid #dcd6c7"></i></div>
+            </div>
+            <div class="kit-grid">
+              <span><img src="assets/work/p1.jpg" alt="" loading="lazy"><em>Just listed</em></span>
+              <span><img src="assets/work/p2.jpg" alt="" loading="lazy"></span>
+              <span><img src="assets/reels/reel1.jpg" alt="" loading="lazy"><em>Open house</em></span>
+              <span><img src="assets/work/p3.jpg" alt="" loading="lazy"></span>
+              <span><img src="assets/reels/reel2.jpg" alt="" loading="lazy"><em>Market update</em></span>
+              <span><img src="assets/work/p4.jpg" alt="" loading="lazy"></span>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">13 / 14</span>
+        <h2>Agent Branding &amp; Social Media Marketing</h2>
+        <p class="svc-lead">Your listings sell houses. Your brand wins the next listing. We build and run the second part.</p>
+        <ul class="svc-list">
+          <li>Brand kit: colours, fonts and post templates with your name on them</li>
+          <li>Headshots and lifestyle content of you at work</li>
+          <li>Monthly content calendar planned around your listings</li>
+          <li>Posting and account management across your channels</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Agent%20Branding%20%26%20Social%20Media#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 SOCIAL MEDIA VIDEOS -->
+  <section class="svc" id="social-video">
+    <div class="wrap svc-row">
+      <div class="svc-visual svc-phones" data-animation="fade-up">
+        <div class="phone">
+          <span class="notch"></span>
+          <img class="screen" src="assets/reels/reel1.jpg" alt="Vertical video sample for TikTok" loading="lazy">
+          <span class="screen-grad"></span><span class="plat">TikTok</span><span class="play" aria-hidden="true"></span>
+          <span class="handle"><span class="who">Listing Tour</span><span class="tag">@youragenthandle</span></span>
+        </div>
+        <div class="phone">
+          <span class="notch"></span>
+          <img class="screen" src="assets/reels/reel2.jpg" alt="Vertical video sample for YouTube Shorts" loading="lazy">
+          <span class="screen-grad"></span><span class="plat">YouTube Shorts</span><span class="play" aria-hidden="true"></span>
+          <span class="handle"><span class="who">Walkthrough</span><span class="tag">@youragenthandle</span></span>
+        </div>
+        <div class="phone">
+          <span class="notch"></span>
+          <img class="screen" src="assets/reels/reel3.jpg" alt="Vertical video sample for Instagram Reels" loading="lazy">
+          <span class="screen-grad"></span><span class="plat">Instagram Reels</span><span class="play" aria-hidden="true"></span>
+          <span class="handle"><span class="who">Just Listed</span><span class="tag">@youragenthandle</span></span>
+        </div>
+      </div>
+      <div class="svc-copy" data-animation="fade-up">
+        <span class="svc-num">14 / 14</span>
+        <h2>Social Media Videos</h2>
+        <p class="svc-lead">Short vertical videos made for TikTok, YouTube and Instagram, with your name and handle on every one.</p>
+        <ul class="svc-list">
+          <li>Vertical 9:16 edits cut for the first three seconds</li>
+          <li>Agent-branded with your name and handle</li>
+          <li>Captions and on-screen text for sound-off viewing</li>
+          <li>Sized and exported for TikTok, YouTube Shorts and Instagram Reels</li>
+        </ul>
+        <div class="svc-cta">
+          <a href="index.html?service=Social%20Media%20Videos#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="svc-end">
+    <div class="wrap" data-animation="fade-up">
+      <span class="svc-kicker">Not sure what you need?</span>
+      <h2>Tell us about the listing. We'll suggest the mix.</h2>
+      <p class="svc-intro">Send the address and your timeline, and we'll recommend the services that fit the home.</p>
+      <div class="svc-cta">
+        <a href="index.html#contact" class="btn btn-gold">Book a shoot <span class="arr">→</span></a>
+        <a href="pricing.html" class="svc-link">See pricing</a>
+      </div>
+    </div>
+  </section>
+
 </main>
+
 
 <!-- FOOTER -->
 <footer class="site-foot">
@@ -68,5 +635,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/services.js"></script>
 </body>
 </html>
