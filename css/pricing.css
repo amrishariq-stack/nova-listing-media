@@ -86,3 +86,7 @@
 @media (max-width:620px){
   .menu,.incl{grid-template-columns:1fr}
 }
+
+/* "if bought separately" comparison under the package price */
+.plan-was{font-size:.8rem;color:rgba(255,255,255,.45);margin-bottom:.9rem}
+.plan-was s{text-decoration:line-through;text-decoration-thickness:1.5px}
