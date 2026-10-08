@@ -168,19 +168,6 @@
 .sk.lt{background:rgba(255,255,255,.3)}
 .sk.wh{background:#fff}
 
-/* print mock (flyer + brochure) */
-.print-stage{position:absolute;inset:30px 0 0;display:flex;align-items:center;justify-content:center}
-.sheet{position:absolute;width:32%;aspect-ratio:8.5/11;background:#fff;border-radius:6px;overflow:hidden;
-  box-shadow:0 30px 60px -20px rgba(0,0,0,.7);display:flex;flex-direction:column}
-.sheet .ph{display:block;height:52%;flex-shrink:0}
-.sheet .ph img{width:100%;height:100%;object-fit:cover}
-.sheet .bd{padding:9% 9% 0;display:flex;flex-direction:column;gap:7px}
-.sheet .ft{margin-top:auto;padding:7% 9%;display:flex;align-items:center;gap:8px;background:var(--ink)}
-.sheet .av{width:20px;height:20px;border-radius:50%;background:var(--gold);flex-shrink:0}
-.sheet.s1{transform:translateX(-58%) rotate(-6deg)}
-.sheet.s2{transform:translateX(58%) rotate(5deg);z-index:2}
-.sheet.s2 .ph{height:38%}
-
 /* editorial pair */
 .ed{position:absolute;inset:0;display:grid;grid-template-columns:.8fr 1.2fr;gap:14px;padding:56px 26px 26px}
 .ed span{position:relative;display:block;overflow:hidden;border-radius:8px}
