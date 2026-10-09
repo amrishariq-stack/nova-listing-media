@@ -351,3 +351,18 @@ button.mock-pill:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){
   .sw,.sw i,.sw i:after,.sw b{animation:none}
 }
+
+/* ---------- coming-soon services ---------- */
+.svc-index .soon{display:block;margin-top:.3rem;font-style:normal;font-family:var(--mono);font-weight:400;font-size:.6rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.svc-index a.is-soon{color:rgba(255,255,255,.5)}
+.svc-index a.is-soon .n{color:rgba(200,162,75,.55)}
+.svc-index a.is-soon:hover .soon,.svc-index a.is-soon:focus-visible .soon{color:var(--ink)}
+.svc-soon{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:26px;padding:.45rem .9rem;border-radius:999px;
+  border:1px solid var(--gold);color:var(--gold);background:rgba(200,162,75,.1);
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.svc-soon:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+/* the row itself is faded and switched off (it also carries the inert attribute) */
+.svc.is-soon .svc-row{opacity:.38;filter:grayscale(.7);pointer-events:none;user-select:none}
+.svc.is-soon .btn[disabled]{cursor:not-allowed}
+.svc.is-soon .svc-link{border-bottom-color:rgba(255,255,255,.3)}
