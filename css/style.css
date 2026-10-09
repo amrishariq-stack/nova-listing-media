@@ -376,6 +376,7 @@ h1,h2,h3,h4{
 .foot-col a{display:block;padding:.35rem 0;color:rgba(255,255,255,.7);transition:color .25s}
 .foot-col a:hover{color:#fff}
 .foot-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:26px 0;font-size:.85rem;color:rgba(255,255,255,.5)}
+.foot-legal{flex-basis:100%;font-size:.8rem;color:rgba(255,255,255,.42)}
 
 /* ---------- scroll-reveal initial states (JS adds .is-in) ---------- */
 [data-animation]{will-change:transform,opacity}
