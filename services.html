@@ -95,11 +95,11 @@
         <a href="#editorial"><span class="n">07</span><span>Editorial Photography</span></a>
         <a href="#print"><span class="n">08</span><span>Flyers &amp; Brochures</span></a>
         <a href="#property-site"><span class="n">09</span><span>Property Website</span></a>
-        <a href="#drone"><span class="n">10</span><span>Drone Photo &amp; Video</span></a>
+        <a href="#drone" class="is-soon"><span class="n">10</span><span>Drone Photo &amp; Video <em class="soon">Coming soon</em></span></a>
         <a href="#showcase"><span class="n">11</span><span>Zillow Showcase</span></a>
-        <a href="#plans-2d" class="is-soon"><span class="n">12</span><span>2D Floor Plans <em class="soon">Coming soon</em></span></a>
-        <a href="#plans-3d" class="is-soon"><span class="n">13</span><span>3D Floor Plans <em class="soon">Coming soon</em></span></a>
-        <a href="#tours" class="is-soon"><span class="n">14</span><span>3D Virtual Tours <em class="soon">Coming soon</em></span></a>
+        <a href="#plans-2d"><span class="n">12</span><span>2D Floor Plans</span></a>
+        <a href="#plans-3d"><span class="n">13</span><span>3D Floor Plans</span></a>
+        <a href="#tours"><span class="n">14</span><span>3D Virtual Tours</span></a>
       </nav>
     </div>
   </section>
@@ -460,9 +460,10 @@
     </div>
   </section>
 
-  <!-- 10 DRONE -->
-  <section class="svc" id="drone">
-    <div class="wrap svc-row">
+  <!-- 10 DRONE (coming soon) -->
+  <section class="svc is-soon" id="drone">
+    <div class="wrap"><span class="svc-soon">Coming soon</span></div>
+    <div class="wrap svc-row" inert>
       <div class="svc-visual" data-animation="scale-up">
         <figure class="frame r16">
           <span class="frame-tag"><b>Sample</b> · aerial photo</span>
@@ -484,8 +485,8 @@
           <li>Flown on the same visit as your photo shoot, weather permitting</li>
         </ul>
         <div class="svc-cta">
-          <a href="index.html?service=Drone%20Photo%20%26%20Video#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
-          <a href="pricing.html" class="svc-link">See pricing</a>
+          <button type="button" class="btn btn-gold" disabled>Book this service <span class="arr">→</span></button>
+          <span class="svc-link" aria-disabled="true">See pricing</span>
         </div>
       </div>
     </div>
@@ -562,10 +563,9 @@
     </div>
   </section>
 
-  <!-- 12 2D FLOOR PLANS (coming soon) -->
-  <section class="svc is-soon" id="plans-2d">
-    <div class="wrap"><span class="svc-soon">Coming soon</span></div>
-    <div class="wrap svc-row" inert>
+  <!-- 12 2D FLOOR PLANS -->
+  <section class="svc" id="plans-2d">
+    <div class="wrap svc-row">
       <div class="svc-visual" data-animation="scale-up">
         <figure class="frame paper">
           <span class="frame-tag"><b>Sample</b> · 2D plan</span>
@@ -583,17 +583,16 @@
           <li>Drops straight into flyers and your property website</li>
         </ul>
         <div class="svc-cta">
-          <button type="button" class="btn btn-gold" disabled>Book this service <span class="arr">→</span></button>
-          <span class="svc-link" aria-disabled="true">See pricing</span>
+          <a href="index.html?service=2D%20Floor%20Plan#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 13 3D FLOOR PLANS (coming soon) -->
-  <section class="svc is-soon" id="plans-3d">
-    <div class="wrap"><span class="svc-soon">Coming soon</span></div>
-    <div class="wrap svc-row" inert>
+  <!-- 13 3D FLOOR PLANS -->
+  <section class="svc" id="plans-3d">
+    <div class="wrap svc-row">
       <div class="svc-visual" data-animation="scale-up">
         <figure class="frame r16 art" data-live>
           <span class="frame-tag"><b>Sample</b> · 3D plan</span>
@@ -615,17 +614,16 @@
           <li>Image files sized for MLS and social</li>
         </ul>
         <div class="svc-cta">
-          <button type="button" class="btn btn-gold" disabled>Book this service <span class="arr">→</span></button>
-          <span class="svc-link" aria-disabled="true">See pricing</span>
+          <a href="index.html?service=3D%20Floor%20Plan#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 14 3D VIRTUAL TOURS (coming soon) -->
-  <section class="svc is-soon" id="tours">
-    <div class="wrap"><span class="svc-soon">Coming soon</span></div>
-    <div class="wrap svc-row" inert>
+  <!-- 14 3D VIRTUAL TOURS -->
+  <section class="svc" id="tours">
+    <div class="wrap svc-row">
       <div class="svc-visual" data-animation="scale-up">
         <figure class="frame r16 tour" data-tour>
           <span class="frame-tag"><b>Sample</b> · tour interface</span>
@@ -678,8 +676,8 @@
           <li>Stays live for as long as the listing does</li>
         </ul>
         <div class="svc-cta">
-          <button type="button" class="btn btn-gold" disabled>Book this service <span class="arr">→</span></button>
-          <span class="svc-link" aria-disabled="true">See pricing</span>
+          <a href="index.html?service=3D%20Virtual%20Tour#contact" class="btn btn-gold">Book this service <span class="arr">→</span></a>
+          <a href="pricing.html" class="svc-link">See pricing</a>
         </div>
       </div>
     </div>
