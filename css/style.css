@@ -108,7 +108,7 @@ h1,h2,h3,h4{
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
 .brand{display:flex;align-items:center;gap:.7rem;font-family:'Archivo',sans-serif;
   font-weight:900;font-size:1.05rem;letter-spacing:-.01em;text-transform:uppercase;color:var(--ink)}
-.brand img{height:38px;width:auto}
+.brand img{height:62px;width:auto}
 .nav-links{display:flex;align-items:center;gap:2.2rem}
 .nav-links a{font-family:'Archivo',sans-serif;font-weight:600;font-size:.82rem;
   letter-spacing:.08em;text-transform:uppercase;color:var(--mute);transition:color .25s;
@@ -220,7 +220,7 @@ h1,h2,h3,h4{
 /* ---------- work / portfolio grid ---------- */
 .work-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
 .tile{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--panel);
-  aspect-ratio:4/3;cursor:pointer}
+  aspect-ratio:4/3}
 .tile.span-7{grid-column:span 7}
 .tile.span-5{grid-column:span 5}
 .tile.span-6{grid-column:span 6}
@@ -323,6 +323,8 @@ h1,h2,h3,h4{
   display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,.5)}
 .phone .play:after{content:"";border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
 .phone .handle{position:absolute;left:16px;bottom:16px;right:16px;z-index:3}
+.phone .handle .who,.phone .handle .tag{display:block}
+.phone .handle .tag{margin-top:.15rem}
 .phone .handle .who{font-family:'Archivo',sans-serif;font-weight:800;font-size:.92rem;color:#fff;text-transform:uppercase;letter-spacing:.01em}
 .phone .handle .tag{font-size:.76rem;color:var(--gold)}
 .reels-foot{display:flex;align-items:center;gap:1.2rem;margin-top:48px;flex-wrap:wrap}
