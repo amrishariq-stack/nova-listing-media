@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a shoot — NoVA Listing Media</title>
+<meta name="description" content="Request a real estate media shoot with NoVA Listing Media: choose a package, add extras and pick a date. Nothing is charged until delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/order.css">
+</head>
+<body id="top">
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="NoVA Listing Media"></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="order.html" class="btn btn-solid">Book a shoot</a>
+    </nav>
+  </div>
+</header>
+
+<!-- BOOKING REQUEST -->
+<main class="svc-page order-page">
+
+  <section class="svc-hero order-hero">
+    <div class="wrap" data-animation="fade-up">
+      <span class="svc-kicker">Book a shoot</span>
+      <h1>Build your order.<span class="thin">Pay on delivery.</span></h1>
+      <p class="svc-intro">Choose a package, add anything extra and tell us when suits you. Nothing is charged today. We'll confirm your date by email.</p>
+    </div>
+  </section>
+
+  <section class="order-body">
+    <div class="wrap">
+      <noscript><p class="order-noscript">This form needs JavaScript. You can also email your order to info@novalistingmedia.com.</p></noscript>
+
+      <div class="order-grid" id="orderWrap">
+        <form id="orderForm" class="order-form" novalidate>
+          <ol class="order-dots" aria-label="Booking steps">
+            <li><button type="button"><i>1</i><span>Property</span></button></li>
+            <li><button type="button"><i>2</i><span>Package</span></button></li>
+            <li><button type="button"><i>3</i><span>Extras</span></button></li>
+            <li><button type="button"><i>4</i><span>Date &amp; contact</span></button></li>
+            <li><button type="button"><i>5</i><span>Review</span></button></li>
+          </ol>
+
+          <!-- 1 PROPERTY -->
+          <fieldset class="order-step" data-step="1">
+            <legend>Where is the shoot?</legend>
+            <label class="fld"><span>Property address</span>
+              <input type="text" id="oAddress" name="address" autocomplete="street-address" placeholder="Street, city, ZIP" required></label>
+            <div class="fld-row">
+              <label class="fld"><span>Approx. square footage</span>
+                <input type="number" id="oSqft" name="sqft" min="100" max="30000" step="50" inputmode="numeric" placeholder="e.g. 2200" required></label>
+              <label class="fld"><span>Is the home lived in?</span>
+                <select id="oStatus" name="status">
+                  <option value="">Choose one (optional)</option>
+                  <option>Occupied</option>
+                  <option>Vacant</option>
+                  <option>Staged</option>
+                </select></label>
+            </div>
+            <p class="fld-hint">Packages cover homes up to 2,500 sq ft. Larger homes add $45 for each extra 1,000 sq ft.</p>
+          </fieldset>
+
+          <!-- 2 PACKAGE -->
+          <fieldset class="order-step" data-step="2">
+            <legend>Pick a package</legend>
+            <div class="opt-grid" id="orderPackages"></div>
+            <p class="fld-hint">Not sure what's in each one? <a href="pricing.html#packages" target="_blank" rel="noopener">Compare the packages</a>.</p>
+          </fieldset>
+
+          <!-- 3 EXTRAS -->
+          <fieldset class="order-step" data-step="3">
+            <legend>Add anything extra</legend>
+            <div class="extras" id="orderExtras"></div>
+          </fieldset>
+
+          <!-- 4 DATE + CONTACT -->
+          <fieldset class="order-step" data-step="4">
+            <legend>When, and how do we reach you?</legend>
+            <div class="fld-row">
+              <label class="fld"><span>Preferred date</span>
+                <input type="date" id="oDate" name="date" required></label>
+              <label class="fld"><span>Preferred time</span>
+                <select id="oTime" name="time">
+                  <option>Flexible</option>
+                  <option>Morning (8–11 AM)</option>
+                  <option>Midday (11 AM–2 PM)</option>
+                  <option>Afternoon (2–5 PM)</option>
+                </select></label>
+            </div>
+            <label class="fld"><span>How do we get in?</span>
+              <select id="oAccess" name="access">
+                <option value="">Choose one (optional)</option>
+                <option>I'll be there</option>
+                <option>Lockbox</option>
+                <option>Someone else will let you in</option>
+              </select></label>
+            <div class="fld-row">
+              <label class="fld"><span>Your name</span>
+                <input type="text" id="oName" name="name" autocomplete="name" required></label>
+              <label class="fld"><span>Brokerage (optional)</span>
+                <input type="text" id="oBrokerage" name="brokerage" autocomplete="organization"></label>
+            </div>
+            <div class="fld-row">
+              <label class="fld"><span>Email</span>
+                <input type="email" id="oEmail" name="email" autocomplete="email" required></label>
+              <label class="fld"><span>Phone</span>
+                <input type="tel" id="oPhone" name="phone" autocomplete="tel" required></label>
+            </div>
+            <label class="fld"><span>Anything we should know? (optional)</span>
+              <textarea id="oNotes" name="notes" rows="3" placeholder="Gate codes, pets, your Instagram handle for the Reel…"></textarea></label>
+            <p class="fld-hint">The date is a request. We'll confirm it, or offer the closest slot, by email.</p>
+          </fieldset>
+
+          <!-- 5 REVIEW -->
+          <fieldset class="order-step" data-step="5">
+            <legend>Check your request</legend>
+            <dl class="order-review" id="orderReview"></dl>
+            <p class="fld-hint">Sending this does not charge you. You pay by card when your media is delivered.</p>
+          </fieldset>
+
+          <input type="checkbox" id="oBot" name="botcheck" class="order-bot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="order-error" id="orderError" role="alert"></p>
+          <div class="order-nav">
+            <button type="button" class="btn btn-light" id="orderBack" hidden>Back</button>
+            <button type="button" class="btn btn-gold" id="orderNext">Continue <span class="arr">→</span></button>
+            <button type="submit" class="btn btn-gold" id="orderSend" hidden>Request booking <span class="arr">→</span></button>
+          </div>
+        </form>
+
+        <aside class="order-sum" aria-label="Your order so far">
+          <span class="svc-num">Your order</span>
+          <ul id="sumList"></ul>
+          <div class="sum-total"><span>Estimated total</span><b id="sumTotal">$0</b></div>
+          <p class="sum-note">An estimate. Final price is confirmed with your date. Pay on delivery.</p>
+        </aside>
+      </div>
+
+      <div class="order-done" id="orderDone" hidden>
+        <span class="svc-kicker">Request received</span>
+        <h2>Thanks — we've got your request.</h2>
+        <p class="svc-intro">We'll email <b id="orderDoneEmail"></b> to confirm your date and send the prep checklist. Nothing has been charged.</p>
+        <div class="svc-cta">
+          <a href="index.html" class="btn btn-gold">Back to the site <span class="arr">→</span></a>
+          <a href="services.html" class="svc-link">See every service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="index.html" class="brand"><img src="assets/logo.png" alt="NoVA Listing Media"></a>
+        <p class="foot-tag">NoVA Listing Media.<br>Listings that sell faster — <strong>delivered by 12 PM.</strong></p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:info@novalistingmedia.com">info@novalistingmedia.com</a>
+        <a href="https://instagram.com/novalistingmedia">@novalistingmedia</a>
+        <a href="order.html">Book a shoot</a>
+        <a href="https://calendar.app.google/9TRESpsxK9cUXizNA" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>Virginia · DC · Maryland</span>
+      <span>© <span id="yr"></span> NoVA Listing Media LLC</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/order.js"></script>
+</body>
+</html>

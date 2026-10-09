@@ -26,7 +26,7 @@
     });
   }
 
-  /* ---------- contact form → compose email (no backend) ---------- */
+  /* ---------- contact form ---------- */
   var cform = document.getElementById("contactForm");
   if (cform) {
     /* package field: prefilled from "Book …" buttons, clearable, datalist dropdown */
@@ -39,7 +39,7 @@
       syncClear();
       pkgInput.focus();
     });
-    /* arriving from a "Book this service" button: index.html?service=…#contact */
+    /* optional prefill: index.html?service=…#contact */
     var asked = new URLSearchParams(window.location.search).get("service");
     if (asked) { pkgInput.value = asked; syncClear(); }
     document.querySelectorAll("[data-package]").forEach(function (btn) {
@@ -62,6 +62,32 @@
         (pkg ? "\nPackage: " + pkg : "") +
         (subj ? "\nProperty address: " + subj : "") + "\n\n" + msg;
       var subjLine = "Shoot inquiry" + (pkg ? " — " + pkg : "") + (subj ? " — " + subj : "");
+
+      /* connected (js/config.js has a Web3Forms key): send straight to the inbox */
+      var forms = window.NOVA_FORMS || {};
+      if (forms.accessKey) {
+        var sendBtn = cform.querySelector('button[type="submit"]');
+        sendBtn.disabled = true;
+        if (note) note.textContent = "Sending…";
+        fetch(forms.endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({
+            access_key: forms.accessKey, subject: subjLine, from_name: "NoVA Listing Media website",
+            "Name": name, email: email, "Package": pkg || "—", "Property address": subj || "—", "Message": msg
+          })
+        }).then(function (res) { return res.json(); }).then(function (json) {
+          if (!json.success) throw new Error(json.message || "Not sent");
+          cform.reset();
+          syncClear();
+          if (note) note.textContent = "Thanks — your message is on its way. We'll reply by email.";
+        }).catch(function () {
+          if (note) note.textContent = "Sorry, that didn't send. Please email " + forms.inbox + " directly.";
+        }).then(function () { sendBtn.disabled = false; });
+        return;
+      }
+
+      /* not connected yet: compose the message in the visitor's email app */
       var href = "mailto:info@novalistingmedia.com" +
         "?subject=" + encodeURIComponent(subjLine) +
         "&body=" + encodeURIComponent(body);
