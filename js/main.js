@@ -69,15 +69,10 @@
         var sendBtn = cform.querySelector('button[type="submit"]');
         sendBtn.disabled = true;
         if (note) note.textContent = "Sending…";
-        fetch(forms.endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({
-            access_key: forms.accessKey, subject: subjLine, from_name: "NoVA Listing Media website",
-            "Name": name, email: email, "Package": pkg || "—", "Property address": subj || "—", "Message": msg
-          })
-        }).then(function (res) { return res.json(); }).then(function (json) {
-          if (!json.success) throw new Error(json.message || "Not sent");
+        forms.send({
+          subject: subjLine, from_name: "NoVA Listing Media website",
+          "Name": name, email: email, "Package": pkg || "—", "Property address": subj || "—", "Message": msg
+        }).then(function () {
           cform.reset();
           syncClear();
           if (note) note.textContent = "Thanks — your message is on its way. We'll reply by email.";

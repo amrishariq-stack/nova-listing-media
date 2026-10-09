@@ -295,17 +295,9 @@
       return;
     }
 
-    data.access_key = cfg.accessKey;
     sendBtn.disabled = true;
     sendBtn.firstChild.textContent = "Sending… ";
-    fetch(cfg.endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify(data)
-    }).then(function (res) { return res.json(); }).then(function (json) {
-      if (!json.success) throw new Error(json.message || "Not sent");
-      done();
-    }).catch(function () {
+    cfg.send(data).then(done).catch(function () {
       sendBtn.disabled = false;
       sendBtn.firstChild.textContent = "Request booking ";
       errBox.textContent = "Sorry, that didn't send. Please try again, or email " + (cfg.inbox || "info@novalistingmedia.com") + ".";
