@@ -13,7 +13,7 @@
   var PACKAGES = [
     { id: "essentials", name: "Essentials", price: 220, desc: "Everything a clean listing needs." },
     { id: "social",     name: "Social",     price: 350, desc: "Your listing and your personal brand, in one shoot.", tag: "Most popular" },
-    { id: "showcase",   name: "Showcase",   price: 429, desc: "The full top-producer treatment." },
+    { id: "showcase",   name: "Showcase",   price: 550, desc: "The full top-producer treatment." },
     { id: "none",       name: "No package", price: 0,   desc: "I'll pick individual services in the next step." }
   ];
 
